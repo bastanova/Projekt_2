@@ -1,0 +1,14 @@
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\bin\Debug\net8.0\Projekt2.exe
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\bin\Debug\net8.0\Projekt2.deps.json
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\bin\Debug\net8.0\Projekt2.runtimeconfig.json
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\bin\Debug\net8.0\Projekt2.dll
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\bin\Debug\net8.0\Projekt2.pdb
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net8.0\Projekt2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net8.0\Projekt2.AssemblyInfoInputs.cache
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net8.0\Projekt2.AssemblyInfo.cs
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net8.0\Projekt2.csproj.CoreCompileInputs.cache
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net8.0\Projekt2.dll
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net8.0\refint\Projekt2.dll
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net8.0\Projekt2.pdb
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net8.0\Projekt2.genruntimeconfig.cache
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net8.0\ref\Projekt2.dll
