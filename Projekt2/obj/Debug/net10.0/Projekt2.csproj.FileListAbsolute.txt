@@ -12,3 +12,4 @@ C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net10.0\refin
 C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net10.0\Projekt2.pdb
 C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net10.0\Projekt2.genruntimeconfig.cache
 C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net10.0\ref\Projekt2.dll
+C:\Users\marke\OneDrive\Dokumenty\VOB\Projekt_2\Projekt2\obj\Debug\net10.0\Projekt2.sourcelink.json
