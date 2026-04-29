@@ -1,4 +1,13 @@
 namespace Projekt2.Meteo;
 
-public record OpenMeteoResponse(CurrentWeather current_weather);
-public record CurrentWeather(double temperature, double windspeed);
+public class OpenMeteoResponse
+{
+    public CurrentWeather current_weather { get; set; }
+}
+
+public class CurrentWeather
+{
+    public double temperature { get; set; }
+    public double windspeed { get; set; }
+    public int weathercode { get; set; }
+}

@@ -1,6 +1,4 @@
 using Projekt2.Meteo;
-using Projekt2.Exceptions;
-using Projekt2.Weather;
 
 namespace Projekt2.Weather;
 

@@ -27,12 +27,31 @@ public class OpenMeteoClient : IWeatherProvider
 
         if (response == null) throw new Exceptions.CityNotFoundException(city);
 
+        string conditionText = MapWeatherCode(response.current_weather.weathercode);
+
         return new WeatherData
         (
             City: city, 
             Temperature: response.current_weather.temperature, 
             WindSpeed: response.current_weather.windspeed, 
-            Condition: "Jasno"
+            Condition: conditionText 
         );
+    }
+
+   
+    private string MapWeatherCode(int code)
+    {
+        return code switch
+        {
+            0 => "Jasno",
+            1 or 2 => "Polojasno",
+            3 => "Zataženo",
+            45 or 48 => "Mlha",
+            >= 51 and <= 67 => "Déšť/Mrholení",
+            >= 71 and <= 77 => "Sněžení",
+            >= 80 and <= 82 => "Přeháňky",
+            >= 95 => "Bouřky",
+            _ => "Neznámý stav"
+        };
     }
 }
