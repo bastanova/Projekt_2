@@ -1,6 +1,7 @@
 namespace Projekt2.Weather;
 
-public record WeatherData(
+public record WeatherData
+(
     string City, 
     double Temperature, 
     double WindSpeed, 

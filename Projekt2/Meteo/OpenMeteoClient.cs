@@ -27,7 +27,8 @@ public class OpenMeteoClient : IWeatherProvider
 
         if (response == null) throw new Exceptions.CityNotFoundException(city);
 
-        return new WeatherData(
+        return new WeatherData
+        (
             City: city, 
             Temperature: response.current_weather.temperature, 
             WindSpeed: response.current_weather.windspeed, 

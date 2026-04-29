@@ -4,7 +4,9 @@ using Projekt2.Exceptions;
 using Projekt2.Locations;
 
 
-AppDomain.CurrentDomain.UnhandledException += (_, args) => {
+
+AppDomain.CurrentDomain.UnhandledException += (_, args) => 
+{
     Console.WriteLine("Fatální chyba aplikace. Probíhá ukončení.");
 };
 
@@ -17,18 +19,18 @@ try
     var cities = CzechCities.RegionalCapitals.Keys.ToArray();
 
     foreach (var city in cities)
-{
-    try 
     {
-        var weather = await service.GetWeatherAsync(city); 
+        try 
+        {
+            var weather = await service.GetWeatherAsync(city); 
         
-        Console.WriteLine($"{weather.City,-10} | Teplota: {weather.Temperature,5:F1}°C | Vítr: {weather.WindSpeed,4:F1} km/h | Stav: {weather.Condition}");
+            Console.WriteLine($"{weather.City,-10} | Teplota: {weather.Temperature,5:F1}°C | Vítr: {weather.WindSpeed,4:F1} km/h | Stav: {weather.Condition}");
+        }
+        catch (WeatherException ex)
+        {
+            Console.WriteLine($"{city,-10} | Chyba: {ex.Message}");
+        }
     }
-    catch (WeatherException ex)
-    {
-        Console.WriteLine($"{city,-10} | Chyba: {ex.Message}");
-    }
-}
 
     var avgTemp = await service.GetAverageTemperatureAsync(cities);
     Console.WriteLine("-------------------------------------------------");
