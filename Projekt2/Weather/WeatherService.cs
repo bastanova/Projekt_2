@@ -1,36 +1,31 @@
-using Projekt2.Meteo;
+
+using Projekt2.Exceptions;  
 
 namespace Projekt2.Weather;
 
 public class WeatherService
 {
-    private readonly OpenMeteoClient _provider;
+    private readonly IWeatherProvider _provider;
 
-    public WeatherService(OpenMeteoClient provider)
+    public WeatherService(IWeatherProvider provider)
     {
         _provider = provider;
     }
 
-    public async Task<WeatherData> GetWeatherAsync(string city)
+    public async Task<WeatherData> GetWeatherAsync(string city, CancellationToken ct = default)
     {
-        try 
+        try
+        {  
+            return await _provider.GetWeatherAsync(city, ct);
+        }
+        catch (WeatherException)
         {
-            return await _provider.GetWeatherAsync(city);
+            throw;
         }
         catch (Exception ex)
         {
-            throw new Exception($"Nepodařilo se načíst data pro město {city}.", ex);
+            throw new Exception($"Neočekávaná chyba při zpracování dat pro město {city}.", ex);
         }
     }
-
-    public async Task<double> GetAverageTemperatureAsync(string[] cities)
-    {
-        double total = 0;
-        foreach (var city in cities)
-        {
-            var weather = await _provider.GetWeatherAsync(city);
-            total += weather.Temperature;
-        }
-        return total / cities.Length;
-    }
+    
 }

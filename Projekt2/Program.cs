@@ -4,8 +4,8 @@ using Projekt2.Exceptions;
 using Projekt2.Locations;
 
 GlobalExceptionHandler.Setup();
-
-using var httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(30) };
+using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
+using var httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(10) };
 var provider = new OpenMeteoClient(httpClient);
 var service = new WeatherService(provider);
 
@@ -21,7 +21,7 @@ try
     {
         try 
         {
-            var weather = await service.GetWeatherAsync(city); 
+            var weather = await service.GetWeatherAsync(city, cts.Token);
             weatherResults.Add(weather);
             
             Console.WriteLine($"{weather.City,-20} | Teplota: {weather.Temperature,5:F1}°C | Vítr: {weather.WindSpeed,4:F1} km/h | Stav: {weather.Condition}");
